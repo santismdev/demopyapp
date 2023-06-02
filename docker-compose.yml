@@ -1,0 +1,12 @@
+version: '2.18'
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-python-app
+    restart: always
+    ports:
+      - 8080:8000
+#volumes:
+#networks:
