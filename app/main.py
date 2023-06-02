@@ -23,9 +23,15 @@ async def function_demo_get():
 
 @app.post("/path")
 async def function_demo_post(inp: Msg):
-    msga = inp.msg.upper()
-    msgb = inp.msg.upper()
-    return {"message": msga+msgb}
+    var1=0
+    array=[Msg]
+    for c in array:
+        print(c)
+    
+    for c in array:
+        print(c+c)
+
+    return {"message": inp.msg.upper()}
 
 
 @app.get("/path/{path_id}")
