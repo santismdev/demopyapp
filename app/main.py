@@ -24,13 +24,17 @@ async def function_demo_get():
 @app.post("/path")
 async def function_demo_post(inp: Msg):
     var1=0
-    array=[Msg]
-    for c in array:
-        print(c)
-    
-    for c in array:
-        print(c+c)
 
+    spam = []
+    for number in range(100):
+        if number % 5 != 0:
+            spam.append(str(number))
+
+    try:
+        num = input('Enter a number: ')
+        num = int(num)
+    except ValueError:
+        pass
     return {"message": inp.msg.upper()}
 
 
